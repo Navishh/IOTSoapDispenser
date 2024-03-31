@@ -1,3 +1,16 @@
+buildscript {
+    repositories {
+        // Check that you have the correct repositories here
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0' // Use your version
+        classpath 'com.google.gms:google-services:4.3.8' // Google Services plugin
+    }
+}
+
+
 allprojects {
     repositories {
         google()
@@ -16,3 +29,4 @@ subprojects {
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
+
