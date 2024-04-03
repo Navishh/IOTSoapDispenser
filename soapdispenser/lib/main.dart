@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:soapdispenser/analytics.dart';
 import 'package:soapdispenser/home_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 void main() async {
@@ -18,7 +19,11 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.purple,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home:  HomePage());
+        home: HomePage(),
+        routes: {
+          '/analytics': (context) => AnalyticsPage(humanCountData: [], soapCountData: [],),
+        },
+    );
   }
 }
 
